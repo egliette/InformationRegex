@@ -1,0 +1,26 @@
+{
+    "testcases": {
+        "basic": {
+            "www.google.com": "www.google.com",
+            "google.com": "google.com",
+            "google.com.vn": "google.com.vn",
+            "lebaoduong@gmail.com": "gmail.com",
+            "hello.": null,
+            "howareyou": null
+        },
+        "with_protocol": {
+            "https://google.com": "https://google.com",
+            "http://www.google.com": "http://www.google.com",
+            "htts://google.com": "google.com",
+            "https:/google.com": "google.com"
+        },
+        "with_port": {
+            "https://google.com:4432": "https://google.com:4432",
+            "http://www.google.com:foobar": "http://www.google.com"
+        },
+        "with_path": {
+            "https://www.google.com/search?q=what+is+url&oq=what+is+url&aqs=chrome..69i57.2275j0j4&sourceid=chrome&ie=UTF-8": "https://www.google.com/search?q=what+is+url&oq=what+is+url&aqs=chrome..69i57.2275j0j4&sourceid=chrome&ie=UTF-8",
+            "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL": "https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL"
+        }
+    }
+}

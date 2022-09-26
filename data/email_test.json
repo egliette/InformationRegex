@@ -1,0 +1,13 @@
+{
+    "testcases": {
+        "basic": {
+            "info@hcmus.edu.vn": "info@hcmus.edu.vn",
+            "levietquoc@gmail.com": "levietquoc@gmail.com",
+            "email@domain-one.com": "email@domain-one.com",
+            "shady_girl@hello.world": "shady_girl@hello.world",
+            "hellogmailcom": null,
+            "@gmail.com": null,
+            "dodaihoc@gmail": null
+        }
+    }
+}
