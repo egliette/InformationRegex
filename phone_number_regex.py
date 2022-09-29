@@ -1,3 +1,5 @@
+import re
+
 from utils import regex_unit_test
 
 
@@ -54,6 +56,7 @@ regex = r"""
     )
 """
 
+re_obj = re.compile(regex, re.VERBOSE)
 
 if __name__ == "__main__":
-    regex_unit_test("data/phone_number_test.json", regex)
+    regex_unit_test("data/phone_number_test.json", re_obj)

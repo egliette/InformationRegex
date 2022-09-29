@@ -1,4 +1,7 @@
+import re
+
 from utils import regex_unit_test
+
 
 regex = r"""
     (?P<username>
@@ -14,5 +17,7 @@ regex = r"""
     )
 """
 
+re_obj = re.compile(regex, re.VERBOSE)
+
 if __name__ == "__main__":
-    regex_unit_test("data/email_test.json", regex)
+    regex_unit_test("data/email_test.json", re_obj)

@@ -1,8 +1,8 @@
 import argparse
 
-import phone_number_regex
-import email_regex
-import url_regex
+from phone_number_regex import re_obj as phone_number_re_obj
+from email_regex import re_obj as email_re_obj
+from url_regex import re_obj as url_re_obj
 from utils import get_matched_list, is_part_of_email, save_result
 
 
@@ -20,9 +20,9 @@ def main(input_path, output_path, print_result=False):
 
     with open(input_path) as file:
         for line in file:
-            phone_numbers += get_matched_list(line, phone_number_regex.regex)
-            matched_emails = get_matched_list(line, email_regex.regex)
-            matched_urls = get_matched_list(line, url_regex.regex)
+            phone_numbers += get_matched_list(line, phone_number_re_obj)
+            matched_emails = get_matched_list(line, email_re_obj)
+            matched_urls = get_matched_list(line, url_re_obj)
             # only choose matched URL which is not a part of matched emails
             if matched_emails:
                 for email_position, __, email in matched_emails:
